@@ -6,7 +6,9 @@ The code has been entirely rewritten from the ground up, not relying on any code
 
 - Current Version: `2.0 (January 22, 2023)`
 
-## Planned
+![A screenshot of Quake, rendered in a top-down view rather than a first-person view.](./.github/fte-20230122051945-0.png)
+
+## Planned Features
 
 - Bring back features from the older versions, like fog-of-war and other settings.
 - Add March-April 2022 jam content.
