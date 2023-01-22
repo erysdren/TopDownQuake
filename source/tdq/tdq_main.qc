@@ -178,6 +178,13 @@ float TDQ_ConsoleCommand(string cmd)
 	// Determine command issued
 	switch(argv(0))
 	{
+		// TDQ toggle
+		case "tdq_toggle":
+			TDQ_QuickToggle();
+			print("\btdq_active:\b ", tdq_active ? "TRUE" : "FALSE", "\n");
+			print("\bdefault:\b ", TDQ_DEFAULT_STATE ? "TRUE" : "FALSE", "\n");
+			return TRUE;
+
 		// TDQ enable
 		case "tdq_enable":
 			TDQ_QuickStartup();

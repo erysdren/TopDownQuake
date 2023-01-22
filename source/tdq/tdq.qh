@@ -95,6 +95,7 @@ void TDQ_Startup();
 void TDQ_Shutdown();
 void TDQ_QuickStartup();
 void TDQ_QuickShutdown();
+void TDQ_QuickToggle();
 void TDQ_Reset();
 
 //=============================================================================

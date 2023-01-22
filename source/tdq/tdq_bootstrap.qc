@@ -64,6 +64,7 @@ void TDQ_Startup()
 	TDQ_Reset();
 
 	// Register console commands
+	registercommand("tdq_toggle");
 	registercommand("tdq_enable");
 	registercommand("tdq_disable");
 	registercommand("tdq_scale");
@@ -108,7 +109,7 @@ void TDQ_Shutdown()
 //=============================================================================
 //
 // Function:
-// - void TDQ_QuickStart()
+// - void TDQ_QuickStartup()
 //
 // Description:
 // - Quick TDQ startup, can only be called after TDQ_Startup()
@@ -141,6 +142,22 @@ void TDQ_QuickShutdown()
 
 	// Set active state
 	tdq_active = FALSE;
+}
+
+//=============================================================================
+//
+// Function:
+// - void TDQ_QuickToggle()
+//
+// Description:
+// - Quick TDQ toggle. Can only be used after TDQ_Startup() has been called.
+//
+void TDQ_QuickToggle()
+{
+	// Set active state
+	tdq_active = tdq_active ? FALSE : TRUE;
+	if (tdq_active) TDQ_QuickStartup();
+	else TDQ_QuickShutdown();
 }
 
 //=============================================================================
