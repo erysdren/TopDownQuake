@@ -1,0 +1,35 @@
+## vscode
+.vscode/
+*.code-workspace
+
+## bsp compile artifacts
+/content/**/mapsrc/**/*.bat
+/content/**/mapsrc/**/*.bsp
+/content/**/mapsrc/**/*.compile.map
+/content/**/mapsrc/**/*.lit
+/content/**/mapsrc/**/*.log
+/content/**/mapsrc/**/*.prt
+/content/**/mapsrc/**/*.pts
+/content/**/mapsrc/**/*.texinfo
+/content/**/mapsrc/**/*.texinfo.json
+/content/**/mapsrc/**/*.json
+/content/**/mapsrc/**/*.vis
+/content/**/mapsrc/**/autosave/
+
+## engine ephemera
+/game/**/conhistory.txt
+/game/**/csqccore.txt
+/game/**/ssqccore.txt
+/game/**/maptimes.txt
+/game/**/fte.cfg
+/game/**/*.bat
+/game/**/*.dll
+/game/**/*.lst
+/game/**/*.sav
+/game/**/*.lno
+/game/**/saves/
+/game/**/screen_recording.mp4
+/game/**/screenshots/
+/game/**/video/
+/game/**/data/
+game/id1/

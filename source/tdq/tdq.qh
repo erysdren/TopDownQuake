@@ -1,0 +1,112 @@
+//=============================================================================
+//
+// MIT License
+//
+// Copyright (c) 2023 erysdren
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to
+// deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+// sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+//
+//=============================================================================
+
+//=============================================================================
+//
+// Project: TopDownQuake
+//
+// File: /source/tdq/tdq.qh
+//
+// Authors: erysdren
+//
+// Modified: January 22 2023
+//
+// Description: Main TDQ header.
+// 
+//=============================================================================
+
+//=============================================================================
+//
+// Global Constants
+//
+vector TDQ_DEFAULT_OFFSET = [0, 0, 64];
+vector TDQ_DEFAULT_CLEAR = [0, 0, 0];
+float TDQ_DEFAULT_SCALE = 1;
+float TDQ_DEFAULT_VERBOSE = FALSE;
+float TDQ_DEFAULT_STATE = TRUE;
+string TDQ_DEFAULT_CROSSHAIR_PIC = "gfx/tdq/crosshair.png";
+vector TDQ_DEFAULT_CROSSHAIR_POS = [0, 0, 0];
+string TDQ_DEFAULT_HALO_PIC = "gfx/tdq/halo.png";
+float TDQ_DEFAULT_HALO_ALPHA = 0.5;
+float TDQ_DEFAULT_HALO_SCALE = 0.5;
+vector TDQ_DEFAULT_HALO_COLOR = [0.25, 0.25, 1];
+string TDQ_DEFAULT_HALO_CROSSHAIR_PIC = "gfx/tdq/halo_crosshair.png";
+float TDQ_DEFAULT_HALO_STATE = FALSE;
+string TDQ_INFO_NAME = "[\bTopDownQuake\b]";
+string TDQ_INFO_AUTHOR = "erysdren";
+string TDQ_INFO_VERSION = "2.0";
+string TDQ_INFO_DATE = "January 22 2023";
+
+//=============================================================================
+//
+// Global Variables
+//
+float tdq_active;
+float tdq_scale;
+float tdq_verbose;
+float tdq_paused;
+vector tdq_origin;
+vector tdq_angles;
+vector tdq_offset;
+vector tdq_clear;
+vector tdq_crosshair_pos;
+vector tdq_crosshair_size;
+string tdq_crosshair_pic;
+vector tdq_screen_size;
+vector tdq_screen_center;
+vector tdq_halo_pos;
+vector tdq_halo_size;
+string tdq_halo_pic;
+vector tdq_halo_color;
+float tdq_halo_alpha;
+float tdq_halo_scale;
+string tdq_halo_crosshair_pic;
+vector tdq_halo_crosshair_size;
+float tdq_halo_active;
+
+//=============================================================================
+//
+// File: tdq_bootstrap.qc
+//
+void TDQ_Reset();
+void TDQ_Startup();
+void TDQ_Shutdown();
+
+//=============================================================================
+//
+// File: tdq_main.qc
+//
+void TDQ_Render_Main(float vwidth, float vheight, float notmenu);
+void TDQ_Input_Main();
+float TDQ_Input_Event(float evtype, float scanx, float chary, float devid);
+float TDQ_ConsoleCommand(string cmd);
+
+//=============================================================================
+//
+// File: tdq_utilities.qc
+//
+vector TDQ_Clamp_Vector(vector in, vector min, vector max);
+vector TDQ_Div_Vector(vector dividend, float divisor);

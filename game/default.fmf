@@ -1,0 +1,5 @@
+game quake
+basegame id1
+basegame tdq
+name "TopDownQuake"
+disablehomedir 1
