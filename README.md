@@ -10,6 +10,26 @@ The latest release can be downloaded in the releases section, or on [Slipseer](h
 
 ![A screenshot of Quake, rendered in a top-down view rather than a first-person view.](./.github/fte-20230122051945-0.png)
 
+## Console Commands
+
+| Command			| Parameters 	| Default				| Description				|
+|-------------------|---------------|-----------------------|---------------------------|
+| `tdq_toggle`		|				|						| Toggle TDQ mode.			|
+| `tdq_enable`		|				|						| Enable TDQ mode.			|
+| `tdq_disable`		|				|						| Disable TDQ mode.			|
+| `tdq_scale`		| `float`		| `1.0`					| Set TDQ render scale. 	|
+| `tdq_offset`		| `vector`		| `0 0 64`				| Set TDQ render offset.	|
+| `tdq_clear`		| `vector`		| `0 0 0`				| Set TDQ clear color.		|
+| `tdq_reset`		|				|						| Reset all TDQ values.		|
+| `tdq_verbose`		| `int`			| `0`					| Print debug info or not.	|
+| `tdq_halo_scale`	| `float`		| `0.5`					| Set TDQ halo scale.		|
+| `tdq_halo_pic`	| `string` 		| `gfx/tdq/halo.png`	| Set TDQ halo image.		|
+| `tdq_halo_alpha`	| `float`		| `0.5`					| Set TDQ halo opacity.		|
+| `tdq_halo_color`	| `vector`		| `0.25 0.25 1.0` 		| Set TDQ halo color.		|
+| `tdq_halo_active`	| `int`			| `0`					| Set TDQ halo state.		|
+| `+tdq`			| 				|						| Quick-enable TDQ mode.	|
+| `-tdq`			| 				|						| Quick-disable TDQ mode.	|
+
 ## Planned Features
 
 - Bring back features from the older versions, like fog-of-war and other settings.
