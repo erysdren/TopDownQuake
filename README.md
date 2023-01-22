@@ -4,7 +4,9 @@ TDQ is a CSQC-only Quake mod allowing you to play the game in a fully top-down v
 
 The code has been entirely rewritten from the ground up, not relying on any code or assets from the old versions of the mod.
 
-- Current Version: `2.0 (January 22, 2023)`
+The latest release can be downloaded in the releases section, or on [Slipseer](https://www.slipseer.com/index.php?resources/topdownquake.24/).
+
+- Current Release Version: `2.0 (January 22, 2023)`
 
 ![A screenshot of Quake, rendered in a top-down view rather than a first-person view.](./.github/fte-20230122051945-0.png)
 
