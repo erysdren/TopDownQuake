@@ -1,3 +1,6 @@
+## folders
+local/
+
 ## vscode
 .vscode/
 *.code-workspace

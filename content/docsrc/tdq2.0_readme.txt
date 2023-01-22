@@ -1,0 +1,40 @@
+|==========================================================|
+|----------------------[TopDownQuake]----------------------|
+|--------------------------[v2.0]--------------------------|
+|==========================================================|
+
+TopDownQuake is a CSQC-only mod for Quake, converting the
+game from a first-person shooter into a top-down shooter.
+
+IMPORTANT NOTE: This mod is only compatible with the most
+up-to-date versions of the FTEQW Quake sourceport. Older
+versions and other sourceports are unlikely to work.
+
+|============================|
+|---[Install Instructions]---|
+|============================|
+
+1. Extract this zip file anywhere.
+
+2. Copy the "id1" folder from your registered version of
+Quake so it sits next to the "tdq2.0" folder in this
+directory.
+
+3. Launch the executable for your appropriate platform:
+	- Windows: "fteglqw64.exe"
+	- Linux: "fteqw-sdl2"
+
+4. Enjoy!
+
+|============================|
+|-------[Further Info]-------|
+|============================|
+
+Project Version:
+	- 2.0 (January 22, 2023)
+
+Project Homepage:
+	- https://github.com/JaycieErysdren/TopDownQuake
+
+Author Homepage:
+	- https://erysdren.me/
