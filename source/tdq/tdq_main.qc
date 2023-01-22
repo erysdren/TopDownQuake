@@ -178,27 +178,16 @@ float TDQ_ConsoleCommand(string cmd)
 	// Determine command issued
 	switch(argv(0))
 	{
-		// TDQ toggle
-		case "tdq_toggle":
-			tdq_active = tdq_active ? FALSE : TRUE;
-			if (tdq_active) TDQ_Startup();
-			else TDQ_Shutdown();
-			print("\btdq_active:\b ", tdq_active ? "TRUE" : "FALSE", "\n");
-			print("\bdefault:\b ", TDQ_DEFAULT_STATE ? "TRUE" : "FALSE", "\n");
-			return TRUE;
-
 		// TDQ enable
 		case "tdq_enable":
-			tdq_active = TRUE;
-			TDQ_Startup();
+			TDQ_QuickStartup();
 			print("\btdq_active:\b ", tdq_active ? "TRUE" : "FALSE", "\n");
 			print("\bdefault:\b ", TDQ_DEFAULT_STATE ? "TRUE" : "FALSE", "\n");
 			return TRUE;
 
 		// TDQ disable
 		case "tdq_disable":
-			tdq_active = FALSE;
-			TDQ_Shutdown();
+			TDQ_QuickShutdown();
 			print("\btdq_active:\b ", tdq_active ? "TRUE" : "FALSE", "\n");
 			print("\bdefault:\b ", TDQ_DEFAULT_STATE ? "TRUE" : "FALSE", "\n");
 			return TRUE;
@@ -270,12 +259,22 @@ float TDQ_ConsoleCommand(string cmd)
 			print("\btdq_halo_color:\b ", vtos(tdq_halo_color), "\n");
 			print("\bdefault:\b ", vtos(TDQ_DEFAULT_HALO_COLOR), "\n");
 			return TRUE;
-		
+
 		// TDQ set halo state
 		case "tdq_halo_active":
 			if (argv(1) != "") tdq_halo_active = stof(argv(1)) > 0 ? TRUE : FALSE;
 			print("\btdq_halo_active:\b ", tdq_halo_active ? "TRUE" : "FALSE", "\n");
 			print("\bdefault:\b ", TDQ_DEFAULT_HALO_STATE ? "TRUE" : "FALSE", "\n");
+			return TRUE;
+
+		// TDQ start automap mode
+		case "+tdq":
+			TDQ_QuickStartup();
+			return TRUE;
+
+		// TDQ end automap mode
+		case "-tdq":
+			TDQ_QuickShutdown();
 			return TRUE;
 
 		// Unknown command issued

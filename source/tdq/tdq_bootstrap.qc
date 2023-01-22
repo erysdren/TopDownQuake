@@ -64,7 +64,6 @@ void TDQ_Startup()
 	TDQ_Reset();
 
 	// Register console commands
-	registercommand("tdq_toggle");
 	registercommand("tdq_enable");
 	registercommand("tdq_disable");
 	registercommand("tdq_scale");
@@ -77,16 +76,16 @@ void TDQ_Startup()
 	registercommand("tdq_halo_alpha");
 	registercommand("tdq_halo_color");
 	registercommand("tdq_halo_active");
+	registercommand("+tdq");
+	registercommand("-tdq");
 
 	// Precache assets
 	precache_pic(TDQ_DEFAULT_CROSSHAIR_PIC);
 	precache_pic(TDQ_DEFAULT_HALO_PIC);
 	precache_pic(TDQ_DEFAULT_HALO_CROSSHAIR_PIC);
 
-	// Set console commands
-	cvar_set("chase_active", "1");
-	cvar_set("sv_aim", "-0.5");
-	cvar_set("r_novis", "1");
+	// Do quick startup stuff
+	TDQ_QuickStartup();
 }
 
 //=============================================================================
@@ -102,10 +101,46 @@ void TDQ_Shutdown()
 	// Tell user we're doing something
 	if (tdq_verbose) print("\bTDQ_Shutdown\b();\n");
 
+	// Do quick shutdown stuff
+	TDQ_QuickShutdown();
+}
+
+//=============================================================================
+//
+// Function:
+// - void TDQ_QuickStart()
+//
+// Description:
+// - Quick TDQ startup, can only be called after TDQ_Startup()
+//
+void TDQ_QuickStartup()
+{
+	// Set console commands
+	cvar_set("chase_active", "1");
+	cvar_set("sv_aim", "-0.5");
+	cvar_set("r_novis", "1");
+
+	// Set active state
+	tdq_active = TRUE;
+}
+
+//=============================================================================
+//
+// Function:
+// - void TDQ_QuickShutdown()
+//
+// Description:
+// - Quick TDQ shutdown.
+//
+void TDQ_QuickShutdown()
+{
 	// Reset console commands
 	cvar_set("chase_active", cvar_defstring("chase_active"));
 	cvar_set("sv_aim", cvar_defstring("sv_aim"));
 	cvar_set("r_novis", cvar_defstring("r_novis"));
+
+	// Set active state
+	tdq_active = FALSE;
 }
 
 //=============================================================================
