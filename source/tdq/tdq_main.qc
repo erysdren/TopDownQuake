@@ -96,7 +96,7 @@ void TDQ_Render_Main(float vwidth, float vheight, float notmenu)
 	renderscene();
 
 	// render crosshair
-	drawpic(tdq_crosshair_pos, tdq_crosshair_pic, tdq_crosshair_size, [1, 1, 1], 1, 0);
+	drawpic(tdq_crosshair_pos - (tdq_crosshair_size / 2), tdq_crosshair_pic, tdq_crosshair_size, [1, 1, 1], 1, 0);
 }
 
 //=============================================================================
