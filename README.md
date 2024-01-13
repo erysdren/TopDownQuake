@@ -6,7 +6,7 @@ The code has been entirely rewritten from the ground up, not relying on any code
 
 The latest release can be downloaded in the releases section, or on [Slipseer](https://www.slipseer.com/index.php?resources/topdownquake.24/).
 
-- Current Release Version: `2.0 (January 22, 2023)`
+- Current Release Version: `2.1 (January 13, 2024)`
 
 ![A screenshot of Quake, rendered in a top-down view rather than a first-person view.](./.github/fte-20230122051945-0.png)
 
@@ -54,7 +54,7 @@ To build the QuakeC code for TopDownQuake, use the `fteqcc64` application (which
 
 MIT License
 
-Copyright (c) 2023 erysdren
+Copyright (c) 2023-2024 erysdren
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

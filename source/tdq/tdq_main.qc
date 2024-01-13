@@ -89,7 +89,7 @@ void TDQ_Render_Main(float vwidth, float vheight, float notmenu)
 	}
 
 	// add entities over halo
-	setviewprop(VF_DRAWENGINESBAR, 0);
+	setviewprop(VF_DRAWENGINESBAR, 1);
 	setviewprop(VF_DRAWCROSSHAIR, 0);
 	setviewprop(VF_DRAWWORLD, 0);
 	addentities(MASK_ENGINE);
