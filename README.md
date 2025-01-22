@@ -54,7 +54,7 @@ To build the QuakeC code for TopDownQuake, use the `fteqcc64` application (which
 
 MIT License
 
-Copyright (c) 2023-2024 erysdren
+Copyright (c) 2022-2025 erysdren (it/its)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
