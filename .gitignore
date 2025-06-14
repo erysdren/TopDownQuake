@@ -1,9 +1,9 @@
-## folders
-local/
+## untracked files
+untracked/
 
-## vscode
-.vscode/
-*.code-workspace
+## engine binaries
+/game/fteqw64
+/game/fteqw64.exe
 
 ## bsp compile artifacts
 /content/**/mapsrc/**/*.bat
