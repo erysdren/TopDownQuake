@@ -68,13 +68,13 @@ void TDQ_Render_Main(float vwidth, float vheight, float notmenu)
 
 	// Perform rendering
 	clearscene();
-	setviewprop(VF_DRAWENGINESBAR, 1);
-	setviewprop(VF_DRAWCROSSHAIR, 0);
-	setviewprop(VF_DRAWWORLD, 1);
-	setviewprop(VF_PERSPECTIVE, FALSE);
-	setviewprop(VF_ANGLES, [90, 90, 0]);
-	setviewprop(VF_FOV, tdq_screen_size * tdq_scale);
-	setviewprop(VF_ORIGIN, tdq_origin + tdq_offset);
+	setproperty(VF_DRAWENGINESBAR, TRUE);
+	setproperty(VF_DRAWCROSSHAIR, FALSE);
+	setproperty(VF_DRAWWORLD, TRUE);
+	setproperty(VF_PERSPECTIVE, FALSE);
+	setproperty(VF_ANGLES, [90, 90, 0]);
+	setproperty(VF_FOV, tdq_screen_size * tdq_scale);
+	setproperty(VF_ORIGIN, tdq_origin + tdq_offset);
 	renderscene();
 
 	// misc
@@ -89,9 +89,9 @@ void TDQ_Render_Main(float vwidth, float vheight, float notmenu)
 	}
 
 	// add entities over halo
-	setviewprop(VF_DRAWENGINESBAR, 1);
-	setviewprop(VF_DRAWCROSSHAIR, 0);
-	setviewprop(VF_DRAWWORLD, 0);
+	setproperty(VF_DRAWENGINESBAR, 1);
+	setproperty(VF_DRAWCROSSHAIR, 0);
+	setproperty(VF_DRAWWORLD, 0);
 	addentities(MASK_ENGINE);
 	renderscene();
 
@@ -121,7 +121,7 @@ void TDQ_Input_Main()
 	makevectors(tdq_angles);
 	input_movevalues = dir[0] * v_forward + dir[1] * v_right + dir[2] * v_up;
 
-	setviewprop(VF_CL_VIEWANGLES, tdq_angles);
+	setproperty(VF_CL_VIEWANGLES, tdq_angles);
 }
 
 //=============================================================================
