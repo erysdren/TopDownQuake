@@ -6,7 +6,7 @@ The code has been entirely rewritten from the ground up, not relying on any code
 
 The latest release can be downloaded in the releases section, or on [Slipseer](https://www.slipseer.com/index.php?resources/topdownquake.24/).
 
-- Current Release Version: `2.1 (January 13, 2024)`
+- Current Release Version: `2.2 (June 13, 2025)` (now includes the 2022 mapping jam content!)
 
 ![A screenshot of Quake, rendered in a top-down view rather than a first-person view.](./.github/fte-20230122051945-0.png)
 
@@ -33,7 +33,7 @@ The latest release can be downloaded in the releases section, or on [Slipseer](h
 ## Planned Features
 
 - Bring back features from the older versions, like fog-of-war and other settings.
-- Add March-April 2022 jam content.
+- ~~Add March-April 2022 jam content.~~
 - Add robust controller bindings.
 - Add DOOM-Automap style mode.
 - Add optional tracers for hitscan weapons.
@@ -43,12 +43,12 @@ The latest release can be downloaded in the releases section, or on [Slipseer](h
 
 Before launching, make sure to copy the `id1` folder from your copy of Quake into the `game` folder. After that, you can launch the executable appropriate for your platform.
 
-- Windows: `fteglqw64.exe`
-- Linux: `fteqw-sdl2`
+- Windows: `fteqw64.exe`
+- Linux: `fteqw64`
 
 ## Building
 
-To build the QuakeC code for TopDownQuake, use the `fteqcc64` application (which can be downloaded [here](https://www.fteqcc.org/)) and point it to `/source/tdq.src`. The rest will be taken care of for you.
+To build the QuakeC code for TopDownQuake, use the `fteqcc64` application (which can be downloaded [here](https://www.fteqcc.org/)) and point it to `/source/progs.src`.
 
 ## License
 
