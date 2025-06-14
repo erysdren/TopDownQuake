@@ -1,5 +1,8 @@
-game quake
-basegame id1
-basegame tdq
-name "TopDownQuake"
-disablehomedir 1
+FTEMANIFEST 1
+GAME quake
+BASEGAME id1
+BASEGAME tdq
+NAME "TopDownQuake"
+DISABLEHOMEDIR 1
+MAINCONFIG "config.cfg"
+DEFAULTEXEC "exec tdq.rc"
