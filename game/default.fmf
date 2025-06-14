@@ -5,4 +5,3 @@ BASEGAME tdq
 NAME "TopDownQuake"
 DISABLEHOMEDIR 1
 MAINCONFIG "config.cfg"
-DEFAULTEXEC "exec tdq.rc"
