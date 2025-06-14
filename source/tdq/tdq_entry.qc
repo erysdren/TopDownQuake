@@ -116,9 +116,9 @@ void CSQC_UpdateView(float vwidth, float vheight, float notmenu)
 		clearscene();
 
 		// Set view properties to default
-		setviewprop(VF_DRAWENGINESBAR, 1);
-		setviewprop(VF_DRAWCROSSHAIR, 1);
-		setviewprop(VF_DRAWWORLD, 1);
+		setproperty(VF_DRAWENGINESBAR, TRUE);
+		setproperty(VF_DRAWCROSSHAIR, TRUE);
+		setproperty(VF_DRAWWORLD, TRUE);
 
 		// Add entities
 		addentities((intermission ? 0 : MASK_VIEWMODEL) | MASK_ENGINE);
