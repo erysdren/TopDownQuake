@@ -57,8 +57,8 @@ string TDQ_DEFAULT_HALO_CROSSHAIR_PIC = "gfx/tdq/halo_crosshair.png";
 float TDQ_DEFAULT_HALO_STATE = FALSE;
 string TDQ_INFO_NAME = "[\bTopDownQuake\b]";
 string TDQ_INFO_AUTHOR = "erysdren";
-string TDQ_INFO_VERSION = "2.1";
-string TDQ_INFO_DATE = "January 13 2024";
+string TDQ_INFO_VERSION = "2.2";
+string TDQ_INFO_DATE = "June 13 2025";
 
 //=============================================================================
 //
